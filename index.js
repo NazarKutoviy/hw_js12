@@ -78,6 +78,44 @@
 //   })
 // );
 // 5
-const products=[
-name: 'radar',
-]
+// const products=[
+// {name: 'radar',price:1300,quantity:7},
+// {name: 'apple vision pro',price:2600,quantity:10}
+// ]
+// function getAllPropValues(arr, prop) {
+//     const values = [];
+
+//     for (const item of arr) {
+//       if (prop in item) {
+//         values.push(item[prop]);
+//       }
+//     }
+
+//     return values;
+//   }
+
+// console.log(getAllPropValues(products, "name"));
+// console.log(getAllPropValues(products, "price"));
+// console.log(getAllPropValues(products, "quantity"));
+// 6
+const products = [
+  { name: "Apple", price: 100, quantity: 5 },
+  { name: "Banana", price: 50, quantity: 10 },
+  { name: "Orange", price: 75, quantity: 3 },
+];
+function calculateTotalPrice(allProducts, productName) {
+  let totalPrice = 0;
+
+  for (const product of allProducts) {
+    if (product.name === productName) {
+      totalPrice = product.price * product.quantity;
+      break;
+    }
+  }
+
+  return totalPrice;
+}
+console.log(calculateTotalPrice(products, "Apple"));
+console.log(calculateTotalPrice(products, "Banana"));
+console.log(calculateTotalPrice(products, "Orange"));
+console.log(calculateTotalPrice(products, "Grapes"));
